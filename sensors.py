@@ -1,9 +1,8 @@
-#!/usr/bin/python3
+# sensors.py - helpers for monitoring sensors temperature on Linux
 
 import datetime
 import json
 import subprocess
-import sys
 import time
 
 
@@ -54,9 +53,6 @@ def monitor_sensor_temp(sensor_desc: str, max_temp: float, secs: int,
         time.sleep(secs)
 
 
-def main(*args) -> None:
-    monitor_sensor_temp(*args)
-
-
 if __name__ == '__main__':
+    import sys
     main(*sys.argv[1:])

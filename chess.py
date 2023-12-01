@@ -1,5 +1,4 @@
-#! python3
-# chess.py - chess study helpers
+# chess.py - helpers for chess study
 
 import collections
 import datetime
@@ -244,8 +243,8 @@ class ProcChessComPgnFile:
 
 
 if __name__ == '__main__':
-    p = ProcChessComPgnFile('C:\\Users\\Vitor\\Downloads\\ConvestPro\\'
-                            'chesscom_example.pgn')
+    import sys
+    p = ProcChessComPgnFile(sys.argv[1])
     p.print_timectrl_desc()
     # p.print_black_hist_clock()
     # p.print_black_hist_time_per_move(False)
