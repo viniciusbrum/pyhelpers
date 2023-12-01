@@ -1,4 +1,5 @@
-# chrome_for_testing.py - helpers for chrome for testing availability
+# chrome_for_testing.py - helpers for monitoring chrome for testing
+#   availability
 
 import functools
 import typing
@@ -136,7 +137,6 @@ def raise_for_lks_outofdate() -> None:
 
 
 if __name__ == '__main__':
-    import pprint
     for c in ('BETA', 'CANARY', 'DEV', 'STABLE'):
         print(f'latest_release_channel "{c}":', latest_release_channel(c))
     raise_for_lks_outofdate()

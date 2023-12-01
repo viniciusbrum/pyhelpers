@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+# sublime_text.py - helpers for sublime text stuffs
 
 import os
 import sys
@@ -22,10 +22,6 @@ def clear_default_settings(path_settings: str) -> str:
     return path_output
 
 
-def main(*args) -> None:
-    path_output = clear_default_settings(*args)
-    print('path:', path_output)
-
-
 if __name__ == '__main__':
-    main(sys.argv[1])
+    import sys
+    print('path:', clear_default_settings(sys.argv[1]))
